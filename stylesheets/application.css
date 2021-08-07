@@ -21,13 +21,13 @@
 html {
   font-family: "Fakt Soft", "Helvetica", sans-serif;
   font-size: 18px;
-  color: #333;
+  background: #fff8e7;
+  color: #121216;
   line-height: 1.5;
 }
 
 a {
-  text-decoration: none;
-  color: #06a;
+  color: #011ac5;
 }
 
 a:hover,
@@ -140,7 +140,6 @@ header {
   background: url('../images/sven.png') no-repeat;
   background-size: 80px;
   background-position: top center;
-  border-bottom: solid 2px #d3d3d3;
   padding: calc(80px + 2em) 0 1em 0;
   margin: 2em 1em 0 1em;
 }
@@ -268,8 +267,7 @@ pre {
 }
 
 footer {
-  border-top: solid 2px #d3d3d3;
-  padding: 1em 0;
+  padding-bottom: 1em;
   margin: 1em;
 }
 
@@ -351,4 +349,12 @@ footer {
   to {
     transform: scale3d(1, 1, 1);
   }
+}
+
+hr {
+  border: 0;
+  height: 0.1em;
+  background: #121216;
+  margin: 1em;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
 }
