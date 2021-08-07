@@ -1,47 +1,236 @@
 ---
-layout: home
 permalink: /
-title: Sven Dahlstrand
-description: I'm Sven Dahlstrand – an aspiring world's best uncle, co-conspirator with Sanna, and no-frills programmer based in Jönköping, Sweden.
 ---
 
-<header>
-  <div>
-    <h1>Hello! I'm <strong>Sven Dahlstrand</strong> –</h1>
-    <p>an aspiring world's best uncle, co-conspirator with Sanna, and no-frills programmer based in Jönköping, Sweden.</p>
-  </div>
-</header>
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<hr />
+    <title>Sven Dahlstrand</title>
 
-<section>
-  <h2>Cherry picked projects</h2>
-  <p>I love tinkering and creating gizmos using my soldering iron and keyboard.</p>
-  <ul class="highlights">
-    {% for project in site.tags.project %}
-      {% if project.highlight_icon.size > 0 %}
-        <li lang="{{ project.language }}" class="h-entry"><a href="{{ project.url }}" class="u-url p-name"><img src="/images/{{ project.highlight_icon}}.png" alt="" width="40" height="40" /> {{ project.title }}</a></li>
-      {% endif %}
-    {% endfor %}
-  </ul>
-  <a href="/projects/" class="action-link">Discover my projects</a>
-</section>
+    <script type="module">
+      document.documentElement.classList.remove("no-js");
+      document.documentElement.classList.add("js");
+    </script>
 
-<section class="spelkosmos">
-  <h2>Sanna + me + video games = <img src="/images/hjarta.png" width="40" height="40" alt="love" /></h2>
-  <p>My best friend Sanna and I run Spelkosmos together: a peppy podcast about video games. Are you a newbie or a nerd? It doesn't matter - it's for everyone!</p>
-  <a href="https://spelkosmos.se/" class="action-link">Listen to Spelkosmos (in Swedish)</a>
-</section>
+    <meta name="referrer" content="no-referrer" />
 
-<section>
-  <h2>Selected writing</h2>
-  <p>Sometimes I take my ideas, write them down and share them with you.</p>
-  <ul class="highlights">
-    {% for post in site.posts %}
-      {% unless post.highlight_icon.size == null or post.tags contains 'project' %}
-        <li lang="{{ post.language }}" class="h-entry"><a href="{{ post.url }}" class="u-url p-name"><img src="/images/{{ post.highlight_icon}}.png" alt="" width="40" height="40" /> {{ post.title | split: ',' | first }}</a></li>
-      {% endunless %}
-    {% endfor %}
-  </ul>
-  <a href="/writing/" class="action-link">Thumb through my writing</a>
-</section>
+    <meta
+      name="description"
+      content="I'm Sven Dahlstrand – an independent
+          full-stack programmer focusing on building performant and accessible
+          user experiences."
+    />
+
+    <link rel="canonical" href="https://dahlstrand.net/" />
+    <link
+      rel="webmention"
+      href="https://webmention.io/dahlstrand.net/webmention"
+    />
+    <link rel="pingback" href="https://webmention.io/dahlstrand.net/xmlrpc" />
+    <link rel="micropub" href="https://micropubs.herokuapp.com/micropub/main" />
+    <link rel="authorization_endpoint" href="https://indieauth.com/auth" />
+    <link rel="token_endpoint" href="https://tokens.indieauth.com/token" />
+    <link type="text/plain" rel="author" href="/humans.txt" />
+    <link rel="me" href="https://github.com/svendahlstrand" />
+    <link rel="me" href="https://micro.blog/sod" />
+
+    <style>
+      :root {
+        --color-bg: #ffffff;
+        --color-alt-bg: #f5f5f5;
+        --color-text-main: #3a3639;
+        --color-primary: #fce883;
+        --color-secondary: #0018a8;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 18px;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+        background-color: var(--color-bg);
+        margin: 0 auto;
+        max-width: 35em;
+        padding: 0.444rem;
+      }
+
+      article {
+        max-width: 30rem;
+      }
+
+      .bubble {
+        background: var(--color-alt-bg);
+        padding: 1rem;
+        margin: 1rem 0;
+        border-radius: 1rem;
+        max-width: 85%;
+        clear: both;
+        /*font-size: 1.444rem;*/
+      }
+
+      img.bubble {
+        max-width: 65%;
+        height: auto;
+      }
+
+      .bubble.agent {
+        background: var(--color-secondary);
+        color: var(--color-bg);
+        float: right;
+      }
+      .bubble.sans-padding {
+        padding: 0;
+      }
+
+      .bubble h1,
+      .bubble h1 + p,
+      .bubble h2 {
+        display: inline;
+        font-size: 1em;
+        font-weight: normal;
+      }
+
+      hr {
+        border: none;
+        height: 0.15em;
+        background: #121216;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+      }
+
+      .button,
+      button {
+        background: var(--color-primary);
+        padding: 0.3rem 0.6rem;
+        border: solid 0.15rem black;
+        border-radius: 0.4rem;
+        font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+          "Courier New", monospace;
+        font-weight: bold;
+        display: inline-block;
+        color: black;
+        text-decoration: none;
+        box-shadow: 1px 1px 0 black;
+      }
+
+      button,
+      input {
+        font-size: inherit;
+      }
+
+      .search-form {
+        display: flex;
+        flex-direction: row;
+        margin: 1em 0;
+      }
+
+      .search-field,
+      #search-button {
+        font-size: 1em;
+        border-radius: 4px;
+      }
+
+      .search-field {
+        padding: 10px;
+        border: solid 2px #d3d3d3;
+        color: #333;
+        flex-grow: 1;
+        overflow: hidden;
+      }
+
+      .search-field:hover,
+      .search-field:focus {
+        border-color: #003c7a;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a href="#navigation" class="button">Skip to navigation</a>
+
+    <hr />
+
+    <article class="">
+      <img
+        src="https://cdn.glitch.com/3739b12d-6a8c-4ea0-85eb-1675fbfc102d%2Fme.jpg?v=1628369546057"
+        alt="Portrait of a smiling, bearded, and long-haired man wearing glasses."
+        width="800"
+        height="800"
+        class="bubble sans-padding"
+      />
+
+      <div class="speech bubble">
+        <h1>
+          <strong>Sven Dahlstrand.</strong>
+        </h1>
+        <p>
+          That's me. The long-haired dude pictured above. I'm an independent
+          full-stack programmer focusing on building performant and accessible
+          user experiences.
+        </p>
+      </div>
+
+      <div class="agent speech bubble">
+        <h2>
+          Sounds like work?
+        </h2>
+      </div>
+
+      <div class="speech bubble">
+        <p>
+          That's right. It started out as a hobby around 1997, and I've helped
+          others get on the world wide web for almost as long. Full-time for
+          more than a decade.
+        </p>
+      </div>
+
+      <div class="speech bubble">
+        <p>
+          This website is mostly about life outside work, though. Including, but
+          not limited to, 🌌 web experiments, 📟 electronics, ⛏
+          reverse-engineering, cocktails, 🚧 building things, and 🌲 hiking.
+        </p>
+      </div>
+      <div class="agent speech bubble">
+        <h2>
+          Oh! Where should I start exploring this site?
+        </h2>
+      </div>
+      <div class="speech bubble">
+        <p>
+          Just keep scrolling to the footer for now. As of August 2021, this
+          website is under heavy development. 😅
+        </p>
+      </div>
+    </article>
+    <hr id="navigation" />
+    <footer>
+      <nav>
+        <a href="/">Go home</a>,
+        <a href="/projects/">discover my projects</a> or
+        <a href="/writing/">thumb through my writing</a>.
+      </nav>
+
+      <form method="get" action="https://duckduckgo.com/" class="search-form">
+        <input
+          id="query"
+          name="q"
+          placeholder="game boy"
+          class="search-field"
+          aria-labelledby="search-button"
+        />
+        <input type="hidden" name="sites" value="dahlstrand.net" />
+
+        <button id="search-button">Search</button>
+      </form>
+    </footer>
+  </body>
+</html>
