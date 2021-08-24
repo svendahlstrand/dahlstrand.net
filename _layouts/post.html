@@ -4,14 +4,16 @@ layout: default
 
 {% capture human_date %}
   {% if page.language == 'sv' %}
-    {% assign month_names = "januari,februari,mars,april,maj,juni,juli,augusti,september,oktober,november,december" | split: "," %}{% assign i = page.date | date: "%-m" | minus: 1 %}{{ page.date | date: "%-d month %Y" | replace: 'month', month_names[i] }}
+    {% assign month_names = "Januari,Februari,Mars,April,Maj,Juni,Juli,Augusti,September,Oktober,November,December" | split: "," %}{% assign i = page.date | date: "%-m" | minus: 1 %}{{ page.date | date: "month %Y" | replace: 'month', month_names[i] }}
   {% else %}
-    {{ page.date | date: "%B %-d, %Y" }}
+    {{ page.date | date: "%B %Y" }}
   {% endif %}
 {% endcapture %}
 
 <article lang="{{ page.language }}" class="h-entry">
   <h1 class="p-name">{{ page.title }}</h1>
   <div class="e-content">{{ content }}</div>
-  <p><time class="dt-published" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ human_date | strip }}</time></p>
+  <p>
+    <time class="dt-published" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ human_date | strip }}</time>{% if page.location %}, {{ page.location }}{% endif %}
+  </p>
 </article>
