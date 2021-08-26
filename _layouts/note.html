@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+<article lang="{{ page.language }}" class="h-entry">
+  <div class="e-content">{{ content }}</div>
+  <p>
+    <time class="dt-published" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%Y-%m-%d %H.%M" }}</time>
+  </p>
+</article>

@@ -7,6 +7,11 @@ include:
   - _redirects
   - .well-known
 
+collections:
+  notes:
+    output: true
+    permalink: :name/
+
 plugins:
   - jekyll-sitemap
 
@@ -22,6 +27,10 @@ defaults:
       path: ""
     values:
       language: "en"
+  - scope:
+      type: "notes"
+    values:
+      layout: "note"
 
 languages: ["sv", "en"]
 
