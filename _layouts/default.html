@@ -34,7 +34,11 @@
     <link rel="preload" href="/fonts/FaktSoftPro-Normal.woff" as="font" type="font/woff" crossorigin />
     <link rel="preload" href="/fonts/FaktSoftPro-SemiBold.woff" as="font" type="font/woff" crossorigin />
 
-    <title>{{ page.title }} - Sven Dahlstrand</title>
+    {% if page.collection == 'notes' %}
+      <title>{{ page.excerpt | strip_html | truncatewords: 5, "…" }} - Sven Dahlstrand</title>
+    {% else %}
+      <title>{{ page.title }} - Sven Dahlstrand</title>
+    {% endif %}
   </head>
   <body>
     {{ content }}
