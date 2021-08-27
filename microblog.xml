@@ -12,7 +12,7 @@ layout: null
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     {% for note in site.notes limit:1000 %}
       <item>
-        <description>{{ note.content | xml_escape }}</description>
+        <description>{{ note.content | replace: '="/', '="https://dahlstrand.net/' | xml_escape }}</description>
         <pubDate>{{ note.date | date_to_rfc822 }}</pubDate>
         <link>{{ note.url | prepend: site.baseurl | prepend: site.url }}</link>
         <guid isPermaLink="true">{{ note.url | prepend: site.baseurl | prepend: site.url }}</guid>
