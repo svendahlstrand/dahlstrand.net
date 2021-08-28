@@ -8,11 +8,12 @@ permalink: /notes/
 <h1>{{ page.title }}</h1>
 
 <ul class="archive">
-  {% for post in site.notes %}
+  {% assign notes = site.notes | sort: 'date' | reverse %}
+  {% for note in notes %}
     <article>
-      <li lang="{{ post.language }}" class="h-entry">
-        {{ post.content }}
-        <a href="{{ post.url }}" class="u-url">{{ post.date }}</a>
+      <li lang="{{ note.language }}" class="h-entry">
+        {{ note.content }}
+        <a href="{{ note.url }}" class="u-url">{{ note.date }}</a>
         <hr />
       </li>
     </article>
