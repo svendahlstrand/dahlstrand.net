@@ -5,14 +5,11 @@ Contact: sven@dahlstrand.net
 
 /* THANKS */
 
-Illustrations: graphicat
-Web: https://www.fiverr.com/graphicat
-
 Photos and illustration: Sanna Lund
-Web: http://sannalund.se
+Web: https://sannalund.se
 
 /* SITE */
 
 Standards: HTML5, CSS3, ECMAScript
-Software: Jekyll, Git, Sublime Text
+Software: Jekyll, Git, Nova
 Service providers: GitHub, CloudFlare, Let's Encrypt, Netlify
