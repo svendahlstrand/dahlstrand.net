@@ -8,3 +8,21 @@ layout: default
     <time class="dt-published" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%Y-%m-%d %H.%M" }}</time>
   </p>
 </article>
+
+<p>
+  <a href="https://micro.blog/sod" class="reply-on-micro-blog">✴️ Visit @sod on Micro.blog</a>
+
+  {% if jekyll.environment == "production" %}
+    <script type>
+      const replyLink = document.querySelector('.reply-on-micro-blog');
+      const currentPageURLEncoded = encodeURIComponent(window.location.href);
+
+      fetch(`https://micro.blog/conversation.js?format=jsonfeed&url=${currentPageURLEncoded}`)
+      .then(response => response.json())
+      .then(conversation => {
+        replyLink.setAttribute('href', conversation.home_page_url);
+        replyLink.innerText = '✴️ Reply on Micro.blog';
+      });
+    </script>
+  {% endif %}
+</p>
