@@ -12,17 +12,15 @@ layout: default
 <p>
   <a href="https://micro.blog/sod" class="reply-on-micro-blog">✴️ Visit @sod on Micro.blog</a>
 
-  {% if jekyll.environment == "production" %}
-    <script type>
-      const replyLink = document.querySelector('.reply-on-micro-blog');
-      const currentPageURLEncoded = encodeURIComponent(window.location.href);
+  <script type>
+    const replyLink = document.querySelector('.reply-on-micro-blog');
+    const currentPageURLEncoded = encodeURIComponent('https://dahlstrand.net{{page.url}}');
 
-      fetch(`https://micro.blog/conversation.js?format=jsonfeed&url=${currentPageURLEncoded}`)
-      .then(response => response.json())
-      .then(conversation => {
-        replyLink.setAttribute('href', conversation.home_page_url);
-        replyLink.innerText = '✴️ Reply on Micro.blog';
-      });
-    </script>
-  {% endif %}
+    fetch(`https://micro.blog/conversation.js?format=jsonfeed&url=${currentPageURLEncoded}`)
+    .then(response => response.json())
+    .then(conversation => {
+      replyLink.setAttribute('href', conversation.home_page_url);
+      replyLink.innerText = '✴️ Reply on Micro.blog';
+    });
+  </script>
 </p>
