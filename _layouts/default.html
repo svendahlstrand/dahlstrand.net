@@ -34,6 +34,18 @@
     <link rel="preload" href="/fonts/FaktSoftPro-Normal.woff" as="font" type="font/woff" crossorigin />
     <link rel="preload" href="/fonts/FaktSoftPro-SemiBold.woff" as="font" type="font/woff" crossorigin />
 
+    {% if page.url == '/surprise-me/' %}
+      <style>
+        html.preparing-surprise {
+          visibility: hidden;
+        }
+      </style>
+
+      <script>
+        document.documentElement.classList.add('preparing-surprise');
+      </script>
+    {% endif %}
+
     {% if page.collection == 'notes' %}
       <title>{{ page.excerpt | strip_html | truncatewords: 5, "…" }} - Sven Dahlstrand</title>
     {% else %}

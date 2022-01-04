@@ -1,0 +1,28 @@
+---
+layout: default
+title: Surprise me!
+sitemap: false
+permalink: /surprise-me/
+---
+
+<h1>{{ page.title }}</h1>
+
+{% assign notes = site.notes | sort: 'date' | reverse %}
+{% for note in notes %}
+  <a href="{{ note.url }}" class="surprise-me-link">{{ forloop.index }}</a>
+{% endfor %}
+
+<script>
+  const redirect = (url) => window.location = shuffle(links)[0].href;
+  const links = [...document.querySelectorAll('.surprise-me-link')];
+  const shuffle = (array) => {
+    for (let i = array.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+
+    return array;
+  };
+
+  redirect(shuffle(links)[0].href);
+</script>
