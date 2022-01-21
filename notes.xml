@@ -8,7 +8,7 @@ permalink: /notes/feed.atom
     <title>Sven's Notes</title>
     <description>Short and scrappy updates from me to you.</description>
     <link>{{ site.url }}{{ site.baseurl }}/notes/</link>
-    <atom:link href="{{ "/microblog.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
+    <atom:link href="{{ "/notes/feed.atom" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     {% for note in site.notes limit:1000 %}
