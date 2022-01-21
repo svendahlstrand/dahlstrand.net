@@ -1,6 +1,6 @@
 ---
 layout: null
-permalink: /notes/feed.atom
+permalink: /notes/feed.rss
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
@@ -8,7 +8,7 @@ permalink: /notes/feed.atom
     <title>Sven's Notes</title>
     <description>Short and scrappy updates from me to you.</description>
     <link>{{ site.url }}{{ site.baseurl }}/notes/</link>
-    <atom:link href="{{ "/notes/feed.atom" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/atom+xml"/>
+    <atom:link href="{{ "/notes/feed.rss" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     {% for note in site.notes limit:1000 %}
