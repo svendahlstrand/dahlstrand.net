@@ -8,7 +8,7 @@ task :test do
                               only_4xx: true,
                               url_ignore: [
                                 'https://indieauth.com/auth',
-                                'https://micropubs.herokuapp.com/micropub/main'
+                                'https://calm-badlands-99608.herokuapp.com/micropub'
                               ]).run
 end
 
