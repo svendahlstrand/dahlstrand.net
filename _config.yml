@@ -13,6 +13,7 @@ collections:
     permalink: :name/
 
 plugins:
+  - jekyll-image-size
   - jekyll-sitemap
 
 permalink: /:title/
