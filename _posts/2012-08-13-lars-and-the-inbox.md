@@ -36,4 +36,4 @@ I've put up some simple rules for myself to handle my electronic inbox:
 
 Following those rules help me be less like Lars. I get more time to do fun stuff when I'm the boss over my inbox. How do you handle your email?
 
-[1]: http://sannalund.se
+[1]: https://sannalund.se

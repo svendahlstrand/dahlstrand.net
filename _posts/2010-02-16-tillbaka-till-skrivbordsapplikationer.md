@@ -20,8 +20,8 @@ Nu är det bara att dra programmet till Dockan och använda det som vilken annan
 
 Om man [googlar] [4] lite är det inte svårt att hitta [läckra ikoner] [5] till sitt favoritprogram.
 
-[1]: http://en.wikipedia.org/wiki/Site-specific_browser
-[2]: http://www.mozillalabs.com/en-US/prism/
-[3]: http://fluidapp.com
-[4]: http://www.google.com/search?q=fluid+OR+prism+icons
-[5]: http://www.flickr.com/groups/fluid_icons/pool
+[1]: https://en.wikipedia.org/wiki/Site-specific_browser
+[2]: https://www.mozillalabs.com/en-US/prism/
+[3]: https://fluidapp.com
+[4]: https://www.google.com/search?q=fluid+OR+prism+icons
+[5]: https://www.flickr.com/groups/fluid_icons/pool

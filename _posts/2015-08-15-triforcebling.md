@@ -9,4 +9,4 @@ language: sv
 
 Foto: [Sanna Lund][1]
 
-[1]: http://sannalund.se
+[1]: https://sannalund.se

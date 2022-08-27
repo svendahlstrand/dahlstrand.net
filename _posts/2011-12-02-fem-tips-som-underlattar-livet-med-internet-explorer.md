@@ -12,8 +12,8 @@ Denna best som vi älskar att hata. Så många timmar vi lagt på att, svärande
 Även om det går mot ljusare tider, till och med Microsoft vill ta livet av IE 6, känns det som att det kommer dröja innan äldre versioner av webbläsaren är ett minne blott. Och eftersom vi ändå kommer få dras med aset ett tag till kan vi lika gärna göra det bästa av situationen. Här följer några tips som gör livet med Internet Explorer lite lättare:
 
 * [ievms](https://github.com/xdissent/ievms): tar automatiskt hem och installerar virtuella maskiner med Windows och IE på. Smidigt för dig som sitter i OS X eller GNU/Linux.
-* [BrowserStack](http://www.browserstack.com): kör IE i molnet med debuggverktyg.
-* [IE Collection](http://finalbuilds.com/iecollection.htm) och [IETester](http://www.my-debugbar.com/wiki/IETester/HomePage): installera och byt lätt mellan flera versioner av IE.
-* [QuirksMode](http://www.quirksmode.org/compatibility.html): mycket bra om webbläsarkompabilitet, inte bara för IE. Svarar på frågor som "vilka webbläsare stödjer :first-child selectorn?".
+* [BrowserStack](https://www.browserstack.com): kör IE i molnet med debuggverktyg.
+* [IETester](https://www.my-debugbar.com/wiki/IETester/HomePage): installera och byt lätt mellan flera versioner av IE.
+* [QuirksMode](https://www.quirksmode.org/compatibility.html): mycket bra om webbläsarkompabilitet, inte bara för IE. Svarar på frågor som "vilka webbläsare stödjer :first-child selectorn?".
 
 Vilka är dina bästa tips för att göra livet med Internet Explorer drägligare?

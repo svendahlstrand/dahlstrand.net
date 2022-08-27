@@ -9,6 +9,6 @@ Det snackas mycket om responsiv design nu för tiden. I stället för att levere
 
 Om du får långtråkigt i julhelgen, passa på att förkovra dig i ämnet! Bra att börja med:
 
-* [Henrik Ekelöfs presentation](http://henrikekelof.com/2011/11/blixttal-pa-polopoly-geeknight) är en bra introduktion.
-* [Responsive Web Design](http://www.abookapart.com/products/responsive-web-design) är en fantastiskt bok, rätt på sak och kortfattad.
-* [Mediaqueri.es](http://mediaqueri.es) samlar webbplatser med responsiv design.
+* [Henrik Ekelöfs presentation](https://www.slideshare.net/henrikekelof/responsive-design-polopoly-geeknight-blixttal) är en bra introduktion.
+* [Responsive Web Design](https://www.abookapart.com/products/responsive-web-design) är en fantastiskt bok, rätt på sak och kortfattad.
+* [Mediaqueri.es](https://mediaqueri.es) samlar webbplatser med responsiv design.

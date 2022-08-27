@@ -28,12 +28,12 @@ Det har smugit sig in ett litet fel i detta avsnitt. I Velocity-mallen kollar ja
 
 [1]: https://github.com/svendahlstrand/sitevision-episodes/blob/master/002-carousel/velocity.vm
 [2]: https://github.com/svendahlstrand/sitevision-episodes/blob/e045f5891af1a94d41512adfa1d1a3f46ea7f598/002-carousel/velocity.vm
-[3]: http://ui-patterns.com/patterns/Carousel
-[4]: http://web.archive.org/web/20100713182545/http://www.sitevision.se/Aktuellt/SiteVisiondagarna-2010/Material-fran-foredragen.html
-[5]: http://nivo.dev7studios.com
+[3]: https://ui-patterns.com/patterns/Carousel
+[4]: https://web.archive.org/web/20100713182545/https://www.sitevision.se/Aktuellt/SiteVisiondagarna-2010/Material-fran-foredragen.html
+[5]: https://nivo.dev7studios.com
 [6]: https://code.google.com/p/jquery-infinite-carousel
-[7]: http://slidesjs.com/
+[7]: https://slidesjs.com/
 [8]: https://github.com/egorkhmelev/jslider
-[9]: http://www.zurb.com/playground/orbit-jquery-image-slider
-[10]: http://css-tricks.github.io/AnythingSlider
+[9]: https://www.zurb.com/playground/orbit-jquery-image-slider
+[10]: https://css-tricks.github.io/AnythingSlider
 [11]: https://github.com/svendahlstrand/sitevision-episodes/tree/master/002-carousel

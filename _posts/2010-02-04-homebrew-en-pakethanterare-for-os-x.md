@@ -25,7 +25,7 @@ Det enda du behöver innan vi kör igång är [Xcode] [7]. Om du har din install
 
 {% highlight bash %}
 # Ladda hem och installera Homebrew från GitHub.
-ruby -e "$(curl -fsS http://gist.github.com/raw/323731/install_homebrew.rb)"
+ruby -e "$(curl -fsS https://gist.github.com/raw/323731/install_homebrew.rb)"
 
 # Så här söker du efter paket samt får mer information om det.
 brew search git
@@ -37,11 +37,11 @@ brew install git
 
 Det är också lätt att bidra till Homebrew, jag har själv skickat in ett par patchar. Eftersom det är öppen källkod behöver man inte heller vänta på att någon annan ska uppdatera ens favoritpaket, det är bara att göra själv! Ta en titt på [Homebrews wiki] [8] för mer information.
 
-[1]: http://git-scm.com/
-[2]: http://www.imagemagick.org/
-[3]: http://www.winehq.org/
-[4]: http://www.finkproject.org/
-[5]: http://www.macports.org/
-[6]: http://github.com/mxcl/homebrew
+[1]: https://git-scm.com/
+[2]: https://www.imagemagick.org/
+[3]: https://www.winehq.org/
+[4]: https://www.finkproject.org/
+[5]: https://www.macports.org/
+[6]: https://github.com/mxcl/homebrew
 [7]: https://developer.apple.com/xcode/
 [8]: https://docs.brew.sh/Formula-Cookbook

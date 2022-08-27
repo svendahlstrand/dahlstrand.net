@@ -5,10 +5,10 @@ task :test do
   HTMLProofer.check_directory('./_site',
                               empty_alt_ignore: true,
                               check_html: true,
-                              only_4xx: true,
-                              url_ignore: [
+                              ignore_urls: [
                                 'https://indieauth.com/auth',
-                                'https://calm-badlands-99608.herokuapp.com/micropub'
+                                'https://calm-badlands-99608.herokuapp.com/micropub',
+                                'https://www.sinatrarb.com'
                               ]).run
 end
 

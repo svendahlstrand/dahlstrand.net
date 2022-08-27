@@ -16,6 +16,6 @@ Nästa bok som ligger i att läsa-högen (om man nu kan räkna iPad som en hög)
 
 Jag ser till att fira varje litet framsteg!
 
-[1]: http://37signals.com/rework
+[1]: https://37signals.com/rework
 [2]: https://gettingthingsdone.com/books/
 [3]: https://zenhabits.net/focus-book/

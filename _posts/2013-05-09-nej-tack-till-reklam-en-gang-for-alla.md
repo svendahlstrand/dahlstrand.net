@@ -37,8 +37,8 @@ När det gäller e-post:
 
 Banners och annan reklam på webbsidor kan du undvika med webbläsartillägget [Adblock Plus] [5]. Efter en enkel installation kommer plötsligt innehållet i fokus på annonstäta webbsidor.
 
-[1]: http://www.google.se/#q=designa%20egen%20skylt
-[2]: http://www.reklamfritt.se
-[3]: http://nixtelefon.org
-[4]: http://mail.google.com
-[5]: http://adblockplus.org
+[1]: https://duckduckgo.com/?q=designa+din+egen+skylt
+[2]: https://www.reklamfritt.se
+[3]: https://sv.wikipedia.org/wiki/NIX-Telefon
+[4]: https://mail.google.com
+[5]: https://adblockplus.org

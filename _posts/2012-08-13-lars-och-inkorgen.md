@@ -36,4 +36,4 @@ För att få kontroll över min inkorg har jag satt upp några enkla regler:
 
 Med dessa regler blir jag mindre som Lars. Jag får kontroll över inkorgen och mer tid över till annat. Hur hanterar du din e-post?
 
-[1]: http://sannalund.se
+[1]: https://sannalund.se

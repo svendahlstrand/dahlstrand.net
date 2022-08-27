@@ -10,4 +10,4 @@ Om du bara kör programmet _history_ presenteras en lång lista med dina senast 
 
 Okej, inget nytt under solen än kanske? Men mindre känt är att det finns ett sökläge för historiken. Innan du börjar skriva något trycker du _ctrl-r_. Nu är det bara att börja söka på ett tidigare kommando, det räcker med ett fragment av det, och det du körde senast som matchar ditt sökord visas. Om du inte är nöjd trycker du _ctrl-r_ igen för att visa nästa träff. När du hittat det du letade efter har du ett par valmöjligheter. Om du bara trycker _retur_ körs kommandot direkt. _ctrl-j_ eller _Escape_ hämtar istället kommandot och låter dig redigera det innan det körs. Ångrar du dig är det bara att trycka _ctrl-c_ för att komma tillbaks till prompten.
 
-[1]: http://sv.wikipedia.org/wiki/Bash
+[1]: https://sv.wikipedia.org/wiki/Bash

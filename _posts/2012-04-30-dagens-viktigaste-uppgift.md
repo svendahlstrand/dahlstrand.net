@@ -16,4 +16,4 @@ Ibland misslyckas jag och fastnar på Twitter eller i inkorgen på morgonen. Men
 
 Jag råder dig att testa detta i morgon: välj ut något som är viktigt för dig och gör den uppgiften det första du gör på morgonen. Leo Babauta, på zenhabits, kallar det för [Most Important Task] [1].
 
-[1]: http://zenhabits.net/purpose-your-day-most-important-task/
+[1]: https://zenhabits.net/purpose-your-day-most-important-task/

@@ -22,6 +22,6 @@ Om du läser det här i framtiden och sitter i SiteVision 2.6.2\_04 eller senare
 
 [2]: https://github.com/svendahlstrand/sitevision-episodes/tree/master/003-carousel-caption/sitevision-2.6.2_04
 [3]: /karusell-med-intelligenta-mallar-i-sitevision
-[4]: http://developer.sitevision.se/webdav/files/apidocs/index.html
-[5]: http://nivo.dev7studios.com
+[4]: https://developer.sitevision.se/webdav/files/apidocs/index.html
+[5]: https://nivo.dev7studios.com
 [6]: https://github.com/svendahlstrand/sitevision-episodes/tree/master/003-carousel-caption

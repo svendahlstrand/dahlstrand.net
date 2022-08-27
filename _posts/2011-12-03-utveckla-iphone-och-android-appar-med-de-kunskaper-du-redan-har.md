@@ -15,8 +15,8 @@ Det låter för bra för att vara sant, finns det någon hake? Det finns ett par
 Fortfarande intresserad? Här kommer du igång:
 
 * [Kom igång-guide för PhoneGap](https://web.archive.org/web/20210302121630/https://phonegap.com/getstarted/).
-* [jQuery Mobile](http://jquerymobile.com) och [Sencha Touch](http://www.sencha.com/products/touch/): två ramverk för att bygga gränssnitt.
-* [Titanium Mobile](http://www.appcelerator.com): alternativ till PhoneGap som låter dig bygga nativegränssnitt med JavaScript.
-* [Toura Mulberry](https://github.com/rmurphey/mulberry): ett ramverk och en samling kommandoradsverktyg ovanpå PhoneGap (tipstack [@Urre](http://urre.me))
+* [jQuery Mobile](https://jquerymobile.com) och [Sencha Touch](https://www.sencha.com/products/touch/): två ramverk för att bygga gränssnitt.
+* [Titanium Mobile](https://www.appcelerator.com): alternativ till PhoneGap som låter dig bygga nativegränssnitt med JavaScript.
+* [Toura Mulberry](https://github.com/rmurphey/mulberry): ett ramverk och en samling kommandoradsverktyg ovanpå PhoneGap (tipstack [@Urre](https://urre.me))
 
 Nu återstår bara den svåra biten: att göra en användbar app som du kan ta betalt för. ;)

@@ -22,8 +22,8 @@ Lägg limeklyftorna i ett lågt glas och strö över socker. Muddla för att pre
 
 Foto: [Sanna Lund][5]
 
-[1]: http://en.wikipedia.org/wiki/Caipirinha
-[2]: http://en.wikipedia.org/wiki/Cachaça
+[1]: https://en.wikipedia.org/wiki/Caipirinha
+[2]: https://en.wikipedia.org/wiki/Cachaça
 [3]: https://www.systembolaget.se/dryck/sprit/havana-club-anejo-56801
 [4]: https://www.goodreads.com/book/show/3275567-the-essential-cocktail
-[5]: http://sannalund.se
+[5]: https://sannalund.se
