@@ -1,4 +1,15 @@
 ---
 label: Note
 hide_body: false
-fields: []
+fields:
+- name: date
+  type: datetime
+  description: ''
+  config:
+    required: true
+    date_format: 
+    time_format: 
+    display_utc: false
+  hidden: true
+  label: Date
+  default: now
