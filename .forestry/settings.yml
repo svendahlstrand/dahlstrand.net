@@ -13,8 +13,10 @@ sections:
 - type: directory
   path: _notes
   label: Notes
-  create: all
+  create: documents
   match: "**/*"
+  templates:
+  - note
 upload_dir: images
 public_path: "/images"
 front_matter_path: ''
