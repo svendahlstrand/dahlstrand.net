@@ -8,7 +8,8 @@ task :test do
                               ignore_urls: [
                                 'https://indieauth.com/auth',
                                 'https://calm-badlands-99608.herokuapp.com/micropub',
-                                'https://www.sinatrarb.com'
+                                'https://www.sinatrarb.com',
+                                'https://www.nytimes.com'
                               ]).run
 end
 
