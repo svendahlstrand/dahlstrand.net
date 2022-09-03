@@ -32,6 +32,7 @@ html {
   background: #fff8e7;
   color: #121216;
   line-height: 1.5;
+  scroll-behavior: smooth;
 }
 
 a {
