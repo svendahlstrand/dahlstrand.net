@@ -310,7 +310,7 @@ button {
 }
 
 .button:hover,
-button {
+.button:focus {
   text-decoration: none;
 }
 
@@ -369,7 +369,8 @@ hr {
   text-decoration: none;
 }
 
-.reply-on-micro-blog:hover {
+.reply-on-micro-blog:hover,
+.reply-on-micro-blog:focus {
   text-decoration: none;
   border-color: #011ac5;
   color: #011ac5;
