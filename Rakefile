@@ -6,7 +6,11 @@ task :test do
                               empty_alt_ignore: true,
                               check_html: true,
                               ignore_urls: [
-                                'https://indieauth.com/auth'
+                                'https://indieauth.com/auth',
+                                /https?:\/\/www.nytimes.com\/.+/
+                              ],
+                              ignore_files: [
+                                './_site/notes/index.html'
                               ]).run
 end
 
