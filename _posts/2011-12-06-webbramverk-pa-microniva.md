@@ -22,4 +22,4 @@ get '/' do
 end
 {% endhighlight %}
 
-Kan det bli mycket sexigare? Om du är nyfiken så tycker jag att du ska kika mer på [Sinatra för Ruby](https://www.sinatrarb.com), [Slim för PHP](https://www.slimframework.com), [Spark för Java](https://www.sparkjava.com) eller [Flask för Python](https://palletsprojects.com/p/flask/).
+Kan det bli mycket sexigare? Om du är nyfiken så tycker jag att du ska kika mer på [Sinatra för Ruby](https://sinatrarb.com), [Slim för PHP](https://www.slimframework.com), [Spark för Java](https://www.sparkjava.com) eller [Flask för Python](https://palletsprojects.com/p/flask/).
