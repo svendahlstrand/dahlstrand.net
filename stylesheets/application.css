@@ -377,3 +377,7 @@ hr {
   color: #011ac5;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
 }
+
+#throw-money-at-sven {
+  display:inline-block;border: solid 0.2em yellow;border-radius:2px;background:black; color:white;padding:0.2em;font-size:1.23em;
+}
