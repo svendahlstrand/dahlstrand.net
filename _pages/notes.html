@@ -13,7 +13,7 @@ permalink: /notes/
     <article>
       <li lang="{{ note.language }}" class="h-entry">
         {{ note.content }}
-        <a href="{{ note.url }}" class="u-url">{{ note.date }}</a>
+        <a href="{{ note.url }}" class="u-url">{{ note.date | date: "%l:%M %P on %b %e, %Y" }}</a>
         <hr />
       </li>
     </article>

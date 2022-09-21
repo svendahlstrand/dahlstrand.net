@@ -5,7 +5,7 @@ layout: default
 <article lang="{{ page.language }}" class="h-entry">
   <div class="e-content">{{ content }}</div>
   <p>
-    <time class="dt-published" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%Y-%m-%d %H.%M" }}</time>
+    <time class="dt-published" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%l:%M %P on %b %e, %Y" }}</time>
   </p>
 </article>
 
