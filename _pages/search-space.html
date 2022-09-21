@@ -5,7 +5,7 @@ sitemap: false
 permalink: /search-space/
 ---
 
-<link href="./all-posts/" rel="prefetch" />
+<link href="./posts-and-replies/" rel="prefetch" />
 
 <form id="search-space-form" role="search">
   <p>
@@ -20,7 +20,7 @@ permalink: /search-space/
 <p id="search-space-info">&nbsp;</p>
 
 <noscript>
-  <p>I'm sorry, but JavaScript is required for searching. You might want to look at <a href="./all-posts/">all unindexed posts and replies</a>. Beware, though, as that page might be heavy.</p>
+  <p>I'm sorry, but JavaScript is required for searching. You might want to look at <a href="./posts-and-replies/">all unindexed posts and replies</a>. Beware, though, as that page might be heavy.</p>
 </noscript>
 
 <hr />
@@ -95,7 +95,7 @@ permalink: /search-space/
 
   inform('Indexing…');
 
-  fetch('./all-posts/')
+  fetch('./posts-and-replies/')
     .then(response => response.text())
     .then(html => {
       const parser = new DOMParser();
