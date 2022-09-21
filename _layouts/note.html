@@ -10,7 +10,7 @@ layout: default
 </article>
 
 <p>
-  <a href="https://micro.blog/sod" class="reply-on-micro-blog">✴️ Visit @sod on Micro.blog</a>
+  <a href="https://micro.blog/sod" class="reply-on-micro-blog">✴️ Conversation on Micro.blog</a>
 
   <script type>
     const replyLink = document.querySelector('.reply-on-micro-blog');
@@ -20,7 +20,7 @@ layout: default
     .then(response => response.json())
     .then(conversation => {
       replyLink.setAttribute('href', conversation.home_page_url);
-      replyLink.innerText = '✴️ Reply on Micro.blog';
+      replyLink.innerText = '✴️ Conversation on Micro.blog';
     });
   </script>
 </p>
