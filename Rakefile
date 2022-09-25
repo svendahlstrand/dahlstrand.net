@@ -10,7 +10,8 @@ task :test do
                                 /https?:\/\/www.nytimes.com\/.+/
                               ],
                               ignore_files: [
-                                './_site/notes/index.html'
+                                './_site/notes/index.html',
+                                './_site/search-space/posts-and-replies/index.html'
                               ]).run
 end
 
