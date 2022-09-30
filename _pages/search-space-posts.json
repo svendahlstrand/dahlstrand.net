@@ -1,0 +1,33 @@
+---
+title: All Posts
+sitemap: false
+permalink: /search-space/documents.json
+---
+
+[
+
+{% for note in site.notes %}
+  {
+    "id": {{ forloop.index | plus: 100000 }},
+    "type": "post",
+    "title": "",
+    "text": {{ note.content | strip_html | jsonify }},
+    "dateiso": {{ note.date | jsonify }},
+    "date": {{ note.date | date: "%l:%M %P on %b %e, %Y" | strip | jsonify }},
+    "permalink": {{ note.url | jsonify }},
+    "timelinelink": "https://micro.blog/conversation.js?format=jsonfeed&url={{ "https://dahlstrand.net" | append: note.url | url_encode }}"
+  },
+{% endfor %}
+
+{% for post in site.posts %}
+  {
+    "id": {{ forloop.index | plus: 200000 }},
+    "type": "post",
+    "title": {{ post.title | jsonify }},
+    "text": {{ post.content | strip_html | jsonify }},
+    "dateiso": {{ post.date | jsonify }},
+    "date": {{ post.date | date: "%l:%M %P on %b %e, %Y" | strip | jsonify }},
+    "permalink": {{ post.url | jsonify }},
+    "timelinelink": "https://micro.blog/conversation.js?format=jsonfeed&url={{ "https://dahlstrand.net" | append: post.url | url_encode }}"
+  },
+{% endfor %}

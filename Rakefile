@@ -18,8 +18,8 @@ end
 task :fetch_and_merge_replies do
   require "open-uri"
 
-  URI.open("https://sod-test.micro.blog/api/all-replies/") do |replies|
-    File.open("./_site/search-space/posts-and-replies/index.html", "a") do |file|
+  URI.open("https://sod-test.micro.blog/api/all-replies.json") do |replies|
+    File.open("./_site/search-space/documents.json", "a") do |file|
       file.write(replies.read)
     end
   end

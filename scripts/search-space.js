@@ -5,6 +5,7 @@ const query = (() => {
 
   queryElement.value = parameter;
   disabledElements.forEach(e => { e.disabled = false; });
+  queryElement.focus();
 
   return {
     element: queryElement,
@@ -49,54 +50,55 @@ const startSuggesting = (index) => {
 const inform = message => document.querySelector('#search-space-info').innerText = message;
 
 const start = performance.now();
+const documentsURL = query.element.getAttribute('data-documents-url');
+
+inform('Fetching data…');
+
+const cache = await caches.open('search-space');
+let response = await cache.match(documentsURL);
+
+if (response === undefined) {
+  cache.keys().then(keys => {
+    keys.forEach(request => {
+      cache.delete(request);
+    });
+  });
+
+  await cache.add(documentsURL);
+  response = await cache.match(documentsURL);
+}
 
 inform('Indexing…');
 
-fetch('./posts-and-replies/')
-  .then(response => response.text())
-  .then(html => {
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(html, 'text/html');
-
-    const articles = [...doc.querySelectorAll('article')].map((article, id) => {
-      return {
-        id: id,
-        title:article.querySelector('h2').textContent,
-        text: article.querySelector('p').textContent,
-        permalink: article.querySelector('time > a').href,
-        timelinelink: article.querySelector('article > a').href,
-        date: article.querySelector('time').textContent
-      };
-    });
-
-    const miniSearch = new MiniSearch({
-      fields: ['title', 'text'],
-      storeFields: ['title', 'text', 'permalink', 'timelinelink', 'date'],
-      searchOptions: {
-        combineWith: 'AND',
-        prefix: term => term.length > 2
-      }
-    });
-
-    miniSearch.addAll(articles);
-
-    inform(`${miniSearch._documentCount} posts and replies indexed.`);
-
-    if (query.parameterIsPresent) {
-      const results = miniSearch.search(query.parameter);
-
-      document.querySelector('#search-space-results').innerHTML = results.map(hit => {
-        const title = hit.title.length > 0 ? `<strong>${hit.title}</strong> ` : '';
-        return `<article><p>${title}${hit.text}</p><p><a href="${hit.permalink}">${hit.date}</a> · <a href="${hit.timelinelink}">Conversation</a></p></article>`;
-      }).join('<hr />');
-
-      const duration = (performance.now() - start) / 1000;
-      inform(`${results.length} results (${ duration.toFixed(2) } seconds)`);
+response.json().then(documents => {
+  const miniSearch = new MiniSearch({
+    fields: ['title', 'text'],
+    storeFields: ['title', 'text', 'permalink', 'timelinelink', 'date'],
+    searchOptions: {
+      combineWith: 'AND',
+      prefix: term => term.length > 2
     }
-
-    startSuggesting(miniSearch);
-  })
-  .catch(err => {
-    inform("⚠️ I'm sorry, something bad happened. Please, check the logs.");
-    console.warn('Something went wrong.', err);
   });
+
+  miniSearch.addAll(documents);
+
+  inform(`${miniSearch._documentCount} posts and replies indexed.`);
+
+  if (query.parameterIsPresent) {
+    const results = miniSearch.search(query.parameter);
+
+    document.querySelector('#search-space-results').innerHTML = results.map(hit => {
+      const title = hit.title.length > 0 ? `<strong>${hit.title}</strong> ` : '';
+      return `<article><p>${title}${hit.text}</p><p><a href="${hit.permalink}">${hit.date}</a> · <a href="${hit.timelinelink}">Conversation</a></p></article>`;
+    }).join('<hr />');
+
+    const duration = (performance.now() - start) / 1000;
+    inform(`${results.length} results (${ duration.toFixed(2) } seconds)`);
+  }
+
+  startSuggesting(miniSearch);
+})
+.catch(err => {
+  inform("⚠️ I'm sorry, something bad happened. Please, check the logs.");
+  console.warn('Something went wrong.', err);
+});

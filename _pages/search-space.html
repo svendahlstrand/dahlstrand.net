@@ -5,12 +5,10 @@ sitemap: false
 permalink: /search-space/
 ---
 
-<link href="./posts-and-replies/" rel="prefetch" />
-
 <form id="search-space-form" role="search">
   <p>
     <label for="q">Search posts and replies:</label>
-    <input type="search" name="q" id="q" placeholder="game boy" disabled list="search-space-suggestions" class="search-field" />
+    <input type="search" name="q" id="q" placeholder="game boy" disabled list="search-space-suggestions" class="search-field" data-documents-url="/search-space/documents.json?v={{ 'now' | date: '%s' }}" />
     <button disabled>Search</button>
   </p>
 
@@ -20,7 +18,7 @@ permalink: /search-space/
 <p id="search-space-info">&nbsp;</p>
 
 <noscript>
-  <p>I'm sorry, but JavaScript is required for searching. You might want to look at <a href="./posts-and-replies/">all unindexed posts and replies</a>. Beware, though, as that page might be heavy.</p>
+  <p>I'm sorry, but JavaScript is required for searching. You might want to look at <a href="/search-space/documents.json">all unindexed posts and replies</a>. Beware, though, as that file might be heavy.</p>
 </noscript>
 
 <hr />
@@ -42,4 +40,4 @@ permalink: /search-space/
 </div>
 
 <script src="/scripts/minisearch.js"></script>
-<script src="/scripts/search-space.js"></script>
+<script src="/scripts/search-space.js" type="module"></script>
