@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/typhoeus/ethon.git
-  revision: 4c09c1a362d350af595e8604fba8cd987c348d5f
+  revision: da1a541f5f875fcffa6c3e73cf266595e9de8ddf
   specs:
     ethon (0.15.0)
       ffi (>= 1.15.0)
@@ -26,7 +26,7 @@ GEM
     ffi (1.15.5)
     fiber-local (1.0.0)
     forwardable-extended (2.6.0)
-    html-proofer (5.0.0)
+    html-proofer (5.0.1)
       addressable (~> 2.3)
       async (~> 2.1)
       nokogiri (~> 1.13)
@@ -38,7 +38,7 @@ GEM
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     io-event (1.1.2)
-    jekyll (4.3.0)
+    jekyll (4.3.1)
       addressable (~> 2.4)
       colorator (~> 1.0)
       em-websocket (~> 0.5)
@@ -98,7 +98,7 @@ GEM
     unicode-display_width (2.3.0)
     webrick (1.7.0)
     yell (2.2.2)
-    zeitwerk (2.6.1)
+    zeitwerk (2.6.4)
 
 PLATFORMS
   ruby
