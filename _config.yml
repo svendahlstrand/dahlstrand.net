@@ -15,6 +15,7 @@ collections:
 plugins:
   - jekyll-image-size
   - jekyll-sitemap
+  - jekyll-loading-lazy
 
 permalink: /:title/
 timezone: Europe/Stockholm

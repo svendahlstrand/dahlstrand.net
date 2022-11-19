@@ -4,6 +4,7 @@ gem 'jekyll'
 
 group :jekyll_plugins do
   gem 'jekyll-sitemap'
+  gem 'jekyll-loading-lazy'
 end
 
 group :test do
