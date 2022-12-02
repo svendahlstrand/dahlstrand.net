@@ -9,7 +9,7 @@ permalink: /notes/feed.xml
     <title>Sven's Notes</title>
     <description>Short and scrappy updates from me to you.</description>
     <link>{{ site.url }}{{ site.baseurl }}/notes/</link>
-    <atom:link href="{{ "/notes/feed.rss" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
+    <atom:link href="{{ "/notes/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     {% assign notes = site.notes | sort: 'date' | reverse %}
