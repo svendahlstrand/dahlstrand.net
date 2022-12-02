@@ -5,6 +5,7 @@ https://www.svendahlstrand.se/* https://dahlstrand.net/:splat 301!
 /skriverier/  /writing/
 /projekt/     /projects/
 /donate/      https://donate.stripe.com/cN29Duc3A7Faeuk003 302
+/notes/feed.rss /notes/feed.xml 302
 
 /.well-known/host-meta* https://mastodon.dahlstrand.net/.well-known/host-meta:splat 301
 /.well-known/webfinger* https://mastodon.dahlstrand.net/.well-known/webfinger:splat 301
