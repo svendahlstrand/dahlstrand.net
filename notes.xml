@@ -11,7 +11,8 @@ permalink: /notes/feed.xml
     <atom:link href="{{ "/notes/feed.rss" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-    {% for note in site.notes limit:1000 %}
+    {% assign notes = site.notes | sort: 'date' | reverse %}
+    {% for note in notes %}
       <item>
         <description>{{ note.content | replace: '="/', '="https://dahlstrand.net/' | xml_escape }}</description>
         <pubDate>{{ note.date | date_to_rfc822 }}</pubDate>
