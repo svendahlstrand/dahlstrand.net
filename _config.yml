@@ -2,6 +2,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - Rakefile
+  - netlify
 include:
   - _headers
   - _pages
