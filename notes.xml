@@ -4,7 +4,7 @@ permalink: /notes/feed.xml
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="/stylesheets/pretty-feed-v3.xsl" type="text/xsl"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:source="http://source.scripting.com/">
   <channel>
     <title>Sven's Notes</title>
     <description>Short and scrappy updates from me to you.</description>
@@ -14,6 +14,9 @@ permalink: /notes/feed.xml
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     {% assign notes = site.notes | sort: 'date' | reverse -%}
     {% for note in notes -%}
+    {%- capture markdown_content -%}
+      {%- include_relative {{ note.path }} -%}
+    {%- endcapture -%}
     <item>
       <description>{{ note.content | replace: '="/', '="https://dahlstrand.net/' | strip_newlines | xml_escape -}}</description>
       <pubDate>{{ note.date | date_to_rfc822 }}</pubDate>
@@ -25,6 +28,7 @@ permalink: /notes/feed.xml
       <category>{{ cat | xml_escape }}</category>
       {% endfor -%}
       <guid isPermaLink="true">{{ note.url | prepend: site.baseurl | prepend: site.url }}</guid>
+      <source:markdown>{{- markdown_content | split: "---" | last | strip | newline_to_br | xml_escape | replace: "&lt;br /&gt;", "&#10;" | strip_newlines -}}</source:markdown>
     {% unless forloop.last -%}
     </item>
     {% endunless -%}
