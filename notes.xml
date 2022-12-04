@@ -12,6 +12,7 @@ permalink: /notes/feed.xml
     <atom:link href="{{ "/notes/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    <cloud domain="rpc.rsscloud.io" port="5337" path="/pleaseNotify" registerProcedure="" protocol="http-post"/>
     {% assign notes = site.notes | sort: 'date' | reverse -%}
     {% for note in notes -%}
     {%- capture markdown_content -%}
