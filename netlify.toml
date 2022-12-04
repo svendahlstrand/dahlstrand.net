@@ -1,3 +1,6 @@
+[functions]
+  node_bundler = "esbuild"
+
 [[edge_functions]]
 path = "/conversation-on-mb"
 function = "conversation-on-mb"
