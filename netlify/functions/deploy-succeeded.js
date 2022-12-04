@@ -17,8 +17,8 @@ const pingCloud = async (url) => {
 };
 
 const handler = async (_event, _context) => {
-  pingCloud('https://dahlstrand.net/notes/feed.xml');
-  pingCloud('https://dahlstrand.net/microblog.xml');
+  await pingCloud('https://dahlstrand.net/notes/feed.xml');
+  await pingCloud('https://dahlstrand.net/microblog.xml');
 
   return {
     statusCode: 200
