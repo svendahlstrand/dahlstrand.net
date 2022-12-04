@@ -1,21 +1,26 @@
 import fetch from 'node-fetch';
 
-const handler = async (_event, _context) => {
+const pingCloud = async (url) => {
   const params = new URLSearchParams();
-  params.append('url', 'https://dahlstrand.net/notes/feed.xml')
+  params.append('url', url);
 
-  const response = await fetch('http://rpc.rsscloud.io:5337/ping', {
+  await fetch('http://rpc.rsscloud.io:5337/ping', {
     method: 'POST',
     headers: { Accept: 'application/json' },
     body: params,
   })
-    .then(response => response.json());
+    .then(response => response.json())
+    .then(json => {
+      json.url = url;
+      console.log(json);
+    });
+};
 
-  console.log(response);
+const handler = async (_event, _context) => {
+  pingCloud('https://dahlstrand.net/notes/feed.xml');
 
   return {
-    statusCode: 200,
-    body: JSON.stringify(response)
+    statusCode: 200
   };
 }
 
