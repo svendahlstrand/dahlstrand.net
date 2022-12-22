@@ -29,7 +29,7 @@ permalink: /notes/feed.xml
       <category>{{ cat | xml_escape }}</category>
       {% endfor -%}
       <guid isPermaLink="true">{{ note.url | prepend: site.baseurl | prepend: site.url }}</guid>
-      <source:markdown>{{- markdown_content | split: "---" | last | strip | newline_to_br | xml_escape | replace: "&lt;br /&gt;", "&#10;" | strip_newlines -}}</source:markdown>
+      <source:markdown>{{- markdown_content | split: "---" | last | strip | replace: '](/', '](https://dahlstrand.net/' | newline_to_br | xml_escape | replace: "&lt;br /&gt;", "&#10;" | strip_newlines -}}</source:markdown>
     {% unless forloop.last -%}
     </item>
     {% endunless -%}
