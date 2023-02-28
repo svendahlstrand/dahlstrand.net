@@ -13,7 +13,7 @@ layout: null
     <cloud domain="rpc.rsscloud.io" port="5337" path="/pleaseNotify" registerProcedure="" protocol="http-post"/>
     {% for note in site.notes limit:1000 -%}
     <item>
-      <description>{{ note.content | replace: '="/', '="https://dahlstrand.net/' | strip_newlines | xml_escape }}</description>
+      <description>{{ note.content | replace: '="/', '="https://dahlstrand.net/' | strip_newlines | xml_escape | replace: '&amp;lt;blockquote', '&lt;blockquote' }}</description>
       <pubDate>{{ note.date | date_to_rfc822 }}</pubDate>
       <link>{{ note.url | prepend: site.baseurl | prepend: site.url }}</link>
       {% for tag in note.tags -%}
