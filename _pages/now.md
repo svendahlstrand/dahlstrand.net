@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Now
+title: What I'm doing now
 permalink: /now/
 ---
 
