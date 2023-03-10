@@ -4,6 +4,8 @@ sitemap: false
 permalink: /search-space/documents.json
 ---
 
+{% assign sitemap_pages = site.pages | where: 'sitemap', true %}
+
 [
 
 {% for note in site.notes %}
@@ -29,5 +31,18 @@ permalink: /search-space/documents.json
     "date": {{ post.date | date: "%l:%M %P on %b %e, %Y" | strip | jsonify }},
     "permalink": {{ post.url | jsonify }},
     "timelinelink": "https://micro.blog/conversation.js?format=jsonfeed&url={{ "https://dahlstrand.net" | append: post.url | url_encode }}"
+  },
+{% endfor %}
+
+{% for page in sitemap_pages %}
+  {
+    "id": {{ forloop.index | plus: 300000 }},
+    "type": "page",
+    "title": {{ page.title | jsonify }},
+    "text": {{ page.content | strip_html | jsonify }},
+    "dateiso": {{ page.date | jsonify }},
+    "date": {{ page.date | date: "%l:%M %P on %b %e, %Y" | strip | jsonify }},
+    "permalink": {{ page.url | jsonify }},
+    "timelinelink": "https://micro.blog/conversation.js?format=jsonfeed&url={{ "https://dahlstrand.net" | append: page.url | url_encode }}"
   },
 {% endfor %}

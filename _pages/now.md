@@ -1,7 +1,9 @@
 ---
 layout: post
 title: What I'm doing now
+sitemap: true
 permalink: /now/
+date: 2023-03-09
 ---
 
 Updated March 9, 2023, from my home in Jönköping.
