@@ -14,4 +14,4 @@ Updated March 9, 2023, from my home in Jönköping.
 
 📺 When it comes to tv, I'm fanboying all over [The Last of Us](https://www.hbo.com/the-last-of-us/season-1). Craig and Neil don't mind switching things up, and I love it. Pedro Pascal and Bella Ramsey are just perfect. Great show!
 
-<small>(This page is inspired by Derek Siver's [now page](https://nownownow.com/about) idea. You should make one, too.)</small>
+<small>(This page is inspired by Derek Sivers's [now page](https://nownownow.com/about) idea. You should make one, too.)</small>
