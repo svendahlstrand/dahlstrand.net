@@ -3,6 +3,8 @@ exclude:
   - Gemfile.lock
   - Rakefile
   - netlify
+  - package.json
+  - package-lock.json
 include:
   - _headers
   - _pages
